@@ -86,7 +86,7 @@ public class ConnectIqMobileSdkModule extends ReactContextBaseJavaModule impleme
     Context context = this.getCurrentActivity().getWindow().getContext();
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
       if (context.isUiContext()) {
-        mConnectIQ = ConnectIQ.getInstance(context, IQConnectType.WIRELESS);
+        mConnectIQ = ConnectIQ.getInstance(context, IQConnectType.TETHERED);
         mConnectIQ.initialize(context, true, new ConnectIQListener() {
           @Override
           public void onSdkReady() {
